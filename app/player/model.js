@@ -42,7 +42,7 @@ let playerSchema = mongoose.Schema(
       type: String,
     },
     phoneNumber: {
-      type: String,
+      type: Number,
       require: [true, "nomor telepon harus diisi"],
       maxLength: [13, "panjang nomor telepon harus antara 9 - 13 karakter"],
       minLength: [9, "panjang nomor telepon harus antara 9 - 13 karakter"],

@@ -7,7 +7,7 @@ let transactionSchema = mongoose.Schema(
       thumbnail: { type: String },
       coinName: { type: String, require: [true, "nama koin harus diisi"] },
       coinQuantity: {
-        type: String,
+        type: Number,
         require: [true, "jumlah koin harus diisi"],
       },
       price: { type: Number },
@@ -50,7 +50,7 @@ let transactionSchema = mongoose.Schema(
     status: {
       type: String,
       enum: ["pending", "success", "failed"],
-      default: 0,
+      default: "pending",
     },
 
     player: {
@@ -70,7 +70,7 @@ let transactionSchema = mongoose.Schema(
 
     category: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Player",
+      ref: "Category",
     },
 
     user: {
