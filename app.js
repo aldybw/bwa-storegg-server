@@ -23,6 +23,19 @@ const app = express();
 const URL = `/api/v1`;
 app.use(cors());
 
+// const mongoose = require("mongoose");
+// const { urlDb } = require("./config");
+// const connectDB = async () => {
+//   try {
+//     await mongoose.connect(urlDb);
+//     console.log("Connect to MongoDB successfully");
+//   } catch (error) {
+//     console.log("Connection failed " + error.message);
+//   }
+// };
+
+// connectDB();
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
